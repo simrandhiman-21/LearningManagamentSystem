@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth-service
+    config:
+      import: configserver:http://localhost:8888
+
+    datasource:
+      url: jdbc:mysql://localhost:3306/uthservicedb
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: mysql@123
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 9001
